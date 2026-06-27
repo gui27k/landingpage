@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevPortfolio - Full Stack &amp; IA</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#0c0f10",
+                    "secondary-fixed": "#acedff",
+                    "on-tertiary-fixed": "#23005c",
+                    "primary-fixed": "#d8e2ff",
+                    "on-secondary-container": "#00424e",
+                    "surface-container-high": "#282a2b",
+                    "surface-tint": "#adc6ff",
+                    "surface-container": "#1d2021",
+                    "tertiary": "#d0bcff",
+                    "on-secondary": "#003640",
+                    "on-primary": "#002e6a",
+                    "on-primary-fixed": "#001a42",
+                    "on-tertiary": "#3c0091",
+                    "primary": "#adc6ff",
+                    "on-error-container": "#ffdad6",
+                    "inverse-primary": "#005ac2",
+                    "background": "#111415",
+                    "on-error": "#690005",
+                    "tertiary-fixed": "#e9ddff",
+                    "secondary-fixed-dim": "#4cd7f6",
+                    "surface-dim": "#111415",
+                    "on-surface-variant": "#c2c6d6",
+                    "surface-container-highest": "#323536",
+                    "error-container": "#93000a",
+                    "outline-variant": "#424754",
+                    "on-tertiary-fixed-variant": "#5516be",
+                    "on-background": "#e1e3e4",
+                    "surface-bright": "#373a3b",
+                    "inverse-on-surface": "#2e3132",
+                    "on-primary-fixed-variant": "#004395",
+                    "surface": "#111415",
+                    "surface-variant": "#323536",
+                    "primary-container": "#4d8eff",
+                    "error": "#ffb4ab",
+                    "on-tertiary-container": "#340080",
+                    "primary-fixed-dim": "#adc6ff",
+                    "inverse-surface": "#e1e3e4",
+                    "secondary-container": "#03b5d3",
+                    "tertiary-container": "#a078ff",
+                    "on-secondary-fixed": "#001f26",
+                    "on-secondary-fixed-variant": "#004e5c",
+                    "on-primary-container": "#00285d",
+                    "secondary": "#4cd7f6",
+                    "tertiary-fixed-dim": "#d0bcff",
+                    "surface-container-low": "#191c1d",
+                    "outline": "#8c909f",
+                    "on-surface": "#e1e3e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "xs": "4px",
+                    "container-max": "1200px",
+                    "lg": "48px",
+                    "sm": "12px",
+                    "base": "8px",
+                    "xl": "80px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": [
+                            "Geist"
+                    ],
+                    "code": [
+                            "Geist Mono"
+                    ],
+                    "headline-md": [
+                            "Geist"
+                    ],
+                    "display": [
+                            "Geist"
+                    ],
+                    "display-mobile": [
+                            "Geist"
+                    ],
+                    "body-md": [
+                            "Geist"
+                    ],
+                    "label-sm": [
+                            "Geist"
+                    ],
+                    "body-lg": [
+                            "Geist"
+                    ],
+                    "label-md": [
+                            "Geist"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "code": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display": [
+                            "64px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.04em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "letterSpacing": "0",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "letterSpacing": "0",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Glassmorphism utilities */
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.6); /* approx #111827 with opacity */
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .ambient-shadow {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 dark:border-outline-variant/30 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface tracking-tight">
+                DevPortfolio
+            </div>
+<div class="hidden md:flex items-center gap-md">
+<!-- Active Navigation: Home -->
+<a class="font-label-md text-label-md text-primary dark:text-secondary-fixed border-b-2 border-primary dark:border-secondary-fixed pb-1 hover:bg-primary/10 dark:hover:bg-secondary-fixed/10 transition-all duration-300 scale-95 active:scale-90" href="#home">Home</a>
+<!-- Inactive Navigations -->
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/10 dark:hover:bg-secondary-fixed/10 transition-all duration-300 scale-95 active:scale-90" href="#sobre">Sobre</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/10 dark:hover:bg-secondary-fixed/10 transition-all duration-300 scale-95 active:scale-90" href="#projetos">Projetos</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/10 dark:hover:bg-secondary-fixed/10 transition-all duration-300 scale-95 active:scale-90" href="#skills">Skills</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/10 dark:hover:bg-secondary-fixed/10 transition-all duration-300 scale-95 active:scale-90" href="#experiencia">Experiência</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/10 dark:hover:bg-secondary-fixed/10 transition-all duration-300 scale-95 active:scale-90" href="#contato">Contato</a>
+</div>
+<button class="hidden md:flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg hover:brightness-110 transition-all duration-200">
+                Entrar em Contato
+            </button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center justify-center pt-xl overflow-hidden" id="home">
+<!-- Animated Shader Background -->
+<div class="absolute inset-0 z-0 opacity-40">
+<!-- STITCH_SHADER_START:ANIMATION_1 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_1" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_1');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Subtle animated dark tech background
+    float strength = 0.5 + 0.5 * cos(u_time * 0.2 + uv.y * 2.0 + uv.x * 3.0);
+    vec3 color1 = vec3(0.043, 0.059, 0.098); // #0B0F19
+    vec3 color2 = vec3(0.067, 0.094, 0.153); // Subtle lighter blue
+    
+    vec3 finalColor = mix(color1, color2, strength * 0.15);
+    
+    // Add subtle "stars" or particles
+    float stars = fract(sin(dot(uv * 100.0, vec2(12.9898, 78.233))) * 43758.5453);
+    if(stars > 0.998) {
+        finalColor += vec3(0.5, 0.6, 1.0) * 0.3;
+    }
+
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_1 -->
+<!-- Overlay gradient to ensure text readability -->
+<div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+<!-- Left Content -->
+<div class="flex flex-col gap-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container border border-outline-variant/30 w-fit">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary">DISPONÍVEL PARA NOVOS PROJETOS</span>
+</div>
+<h1 class="font-display-mobile md:font-display text-display-mobile md:text-display text-on-surface">
+                    Transformando ideias em <br class="hidden lg:block"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">experiências digitais inteligentes</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Desenvolvedor Full Stack especializado em integrações de Inteligência Artificial, automação de processos e interfaces de alta performance.
+                </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<a class="flex items-center gap-2 bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-lg hover:brightness-110 transition-all duration-200" href="#projetos">
+                        Ver Projetos
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="flex items-center gap-2 bg-transparent border border-outline-variant text-on-surface font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-surface-container transition-all duration-200" href="#contato">
+                        Entrar em Contato
+                    </a>
+</div>
+</div>
+<!-- Right Image Area -->
+<div class="relative flex justify-center lg:justify-end">
+<div class="relative w-full max-w-lg aspect-square glass-panel rounded-2xl overflow-hidden ambient-shadow border border-outline-variant/50">
+<!-- Specific requested image placeholder -->
+<img alt="Tech Setup" class="w-full h-full object-cover mix-blend-luminosity opacity-80 hover:opacity-100 hover:mix-blend-normal transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8xWCSFKAIErTJWJ3o3dz3pNdj23SN7EbdVDAEfppD_p291Bve6cwyVlWWcRNk5aeQkX2uooFK_LxxStglIh4DCEWvDWdDC0NYfr1HbOQEuIJkWJYzc6weHbLeD1bdEgKQ7zq8hBXfddIH6gUh34R3WGaEgpNFW1NZS_aBR6Jho1KISz7NVtTrLHsheReJuNjTILSa0PK5J2Y2J7RzEVo12eJtxXkeUGX2I_vuge7j_jFBPxvk-ROe"/>
+<!-- Decorative elements -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary/20 blur-3xl rounded-full"></div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
+</div>
+</div>
+</div>
+</header>
+<!-- Statistics Section -->
+<section class="py-lg px-gutter max-w-container-max mx-auto relative z-10 -mt-xl">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md">
+<div class="glass-panel p-6 rounded-xl flex flex-col items-center justify-center text-center">
+<span class="font-headline-lg text-headline-lg text-primary">+30</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Projetos Entregues</span>
+</div>
+<div class="glass-panel p-6 rounded-xl flex flex-col items-center justify-center text-center">
+<span class="font-headline-lg text-headline-lg text-secondary">+5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Anos de Experiência</span>
+</div>
+<div class="glass-panel p-6 rounded-xl flex flex-col items-center justify-center text-center">
+<span class="font-headline-lg text-headline-lg text-tertiary">100%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Sistemas Responsivos</span>
+</div>
+<div class="glass-panel p-6 rounded-xl flex flex-col items-center justify-center text-center">
+<span class="font-headline-lg text-headline-lg text-primary">24/7</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Aprendizado Contínuo</span>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl px-gutter max-w-container-max mx-auto" id="sobre">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg items-center">
+<!-- Profile Area -->
+<div class="lg:col-span-5 flex flex-col items-center lg:items-start gap-6">
+<div class="relative w-48 h-48 rounded-full overflow-hidden border-2 border-outline-variant p-2 ambient-shadow">
+<img class="w-full h-full rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional headshot of a software engineer in a modern, dark-themed studio setting. The lighting is cinematic with subtle blue and cyan rim lights, highlighting a thoughtful expression. The background is a blurred high-tech environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqvDNYhrabtexO6-tdthrWl_YDyoL3Ap6UOkWyK8nxkZaAycSEO_f6XLz6OwrdStOFvdScQ36qsnmp266-YVlhsKGONxLEXvSx8ixQFuI-OJHBpqklyF7MWZAlvHqQUJQ3AHBb20_hx9Jes6rGzHhL18WHggtRgRWfZxOw5YXIas-oqCjxdKR6AdEN8oNDVIjKiXwdP8jpL3SIVAnpnmwXKBuNE12tQESQjHKNoFCCYGzupjwC7SWC"/>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Sobre Mim</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                        Sou um engenheiro de software apaixonado por resolver problemas complexos com código limpo e arquiteturas escaláveis. Minha jornada transita entre o desenvolvimento web robusto e a implementação de soluções inovadoras de Inteligência Artificial.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Acredito que a tecnologia deve ser invisível, focando na entrega de valor real e experiências sem atrito para o usuário final.
+                    </p>
+</div>
+</div>
+<!-- Bento Grid Skills -->
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container border border-outline-variant/50 p-6 rounded-xl hover:border-primary/50 transition-colors group">
+<span class="material-symbols-outlined text-primary mb-4 text-[32px] group-hover:scale-110 transition-transform">code</span>
+<h3 class="font-headline-md text-headline-md text-on-surface text-lg mb-2">Desenvolvimento Web</h3>
+<p class="font-body-sm text-on-surface-variant">Arquiteturas modernas e interfaces responsivas de alta performance.</p>
+</div>
+<div class="bg-surface-container border border-outline-variant/50 p-6 rounded-xl hover:border-secondary/50 transition-colors group">
+<span class="material-symbols-outlined text-secondary mb-4 text-[32px] group-hover:scale-110 transition-transform">memory</span>
+<h3 class="font-headline-md text-headline-md text-on-surface text-lg mb-2">Inteligência Artificial</h3>
+<p class="font-body-sm text-on-surface-variant">Integração de LLMs, LangChain e fluxos de IA generativa.</p>
+</div>
+<div class="bg-surface-container border border-outline-variant/50 p-6 rounded-xl hover:border-tertiary/50 transition-colors group">
+<span class="material-symbols-outlined text-tertiary mb-4 text-[32px] group-hover:scale-110 transition-transform">autorenew</span>
+<h3 class="font-headline-md text-headline-md text-on-surface text-lg mb-2">Automação</h3>
+<p class="font-body-sm text-on-surface-variant">Otimização de processos com n8n, Python scripts e webhooks.</p>
+</div>
+<div class="bg-surface-container border border-outline-variant/50 p-6 rounded-xl hover:border-primary/50 transition-colors group">
+<span class="material-symbols-outlined text-primary mb-4 text-[32px] group-hover:scale-110 transition-transform">design_services</span>
+<h3 class="font-headline-md text-headline-md text-on-surface text-lg mb-2">UI/UX Design</h3>
+<p class="font-body-sm text-on-surface-variant">Foco em usabilidade, glassmorphism e design systems coerentes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Technologies Section -->
+<section class="py-xl bg-surface-container-low border-y border-outline-variant/20" id="skills">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Stack Tecnológico</h2>
+<div class="flex flex-wrap justify-center gap-3">
+<!-- Tech Chips -->
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-secondary hover:text-secondary transition-all cursor-default">React</div>
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-secondary hover:text-secondary transition-all cursor-default">Next.js</div>
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-primary hover:text-primary transition-all cursor-default">Python</div>
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-primary hover:text-primary transition-all cursor-default">JavaScript</div>
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-primary hover:text-primary transition-all cursor-default">TypeScript</div>
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-secondary hover:text-secondary transition-all cursor-default">Node.js</div>
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-tertiary hover:text-tertiary transition-all cursor-default">Tailwind CSS</div>
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-primary hover:text-primary transition-all cursor-default">Docker</div>
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-secondary hover:text-secondary transition-all cursor-default">Git</div>
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-primary hover:text-primary transition-all cursor-default">PostgreSQL</div>
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-secondary hover:text-secondary transition-all cursor-default">MongoDB</div>
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-tertiary hover:text-tertiary transition-all cursor-default">OpenAI API</div>
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-tertiary hover:text-tertiary transition-all cursor-default">LangChain</div>
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-tertiary hover:text-tertiary transition-all cursor-default">n8n</div>
+<div class="px-4 py-2 bg-surface border border-outline-variant/30 rounded-lg font-code text-code text-on-surface hover:border-secondary hover:text-secondary transition-all cursor-default">Firebase</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-xl px-gutter max-w-container-max mx-auto" id="projetos">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Projetos em Destaque</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 max-w-2xl">Uma seleção de trabalhos recentes envolvendo desenvolvimento full stack e implementações de inteligência artificial.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Project Card 1 -->
+<div class="group relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/50">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-fidelity screenshot of a modern SaaS dashboard UI featuring dark mode styling, complex data visualizations with glowing charts in blue and purple, and a clean minimalist sidebar. The aesthetic is highly technical and precise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMv6OQssQkA9FNSpXKLfEgab836GkFtRfh_JfmDpOyPUCwmdCW4BustEB_Pq3vGhTJlaPiOVkkMLagXdtd79fFS9HGtytQKYK1R4mmpswuJA92vG_7YMgNXIFdoAWfAZS8bloTI-K-aI_Ps9bhM6yMZjMGPewTDM-pPZ3eRko9Qii5yG23znZHuFNM4xLXwxhQZd_Z29WVrWN4ja-LlOxfaJXBzMRCdSW7-B0wjiNqUvwEZgAPWF06"/>
+<div class="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+<a class="bg-primary text-on-primary font-label-md px-6 py-2 rounded-lg flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300" href="#">
+                            Ver Detalhes <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="p-6">
+<div class="flex gap-2 mb-3">
+<span class="font-code text-[10px] uppercase text-secondary bg-secondary/10 px-2 py-1 rounded">Next.js</span>
+<span class="font-code text-[10px] uppercase text-tertiary bg-tertiary/10 px-2 py-1 rounded">OpenAI</span>
+</div>
+<h3 class="font-headline-md text-on-surface text-lg mb-2 group-hover:text-primary transition-colors">Plataforma SaaS IA</h3>
+<p class="font-body-sm text-on-surface-variant text-sm line-clamp-2">Um sistema completo de geração de conteúdo automatizado utilizando a API da OpenAI e arquitetura serverless.</p>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/50">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-end e-commerce web application interface shown on a dark background. The layout is asymmetric and modern, featuring high-quality product photography floating over dark, glass-like panels. Minimalist typography and clear calls to action." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWChZJMtlDWSeQtqazl2CinNouVgd4c_47xFLpVtdTi2jopwerCp_whbvU4sVNAAcSkksuFfkTMHpOYoIW4Ug947v-FwILiARMJgHRkfnUOp90ncHfBnwMo_TlahVv0TxICWB2YndgnxUXsivfX4kAqmGmSxpON5pGGFCfpnzDnYwKq58iOiiMJAh1L5L8OM8_upKMYTXWPwlnBXVrU8u6cvHFgRhvzekv6QgvNjvezvLUP4EdKP0U"/>
+<div class="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+<a class="bg-primary text-on-primary font-label-md px-6 py-2 rounded-lg flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300" href="#">
+                            Ver Detalhes <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="p-6">
+<div class="flex gap-2 mb-3">
+<span class="font-code text-[10px] uppercase text-primary bg-primary/10 px-2 py-1 rounded">React</span>
+<span class="font-code text-[10px] uppercase text-secondary bg-secondary/10 px-2 py-1 rounded">Node.js</span>
+</div>
+<h3 class="font-headline-md text-on-surface text-lg mb-2 group-hover:text-primary transition-colors">E-commerce Premium</h3>
+<p class="font-body-sm text-on-surface-variant text-sm line-clamp-2">Loja virtual com altíssima performance, gestão de estoque em tempo real e painel de controle administrativo completo.</p>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="group relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/50">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A workflow automation diagram visualization UI with nodes connected by glowing lines on a dark canvas. The aesthetic resembles advanced node-based visual programming software, with dark gray panels and bright cyan and purple accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAExRl-RsGb0dInm1bsW92st16cj4pR9qbyWkDCOKUMj23XiX0dJcJv0Pv86YTUbHniNsPh1_2fwGByrRnTnwusKaPHUUXfI3GHex2DrY8J5c4MllJbKbw2wyBhTvfDmm848aY1OyGcToJKBvQoLP-bmY-9sH9EFz8xwAFnSwMzDAVSVwTNmAQ4q60N5vUlY97r1FySX0_KvG5GqxGgbdmhEh1A8GZKH9r1u3dpEPgh-QnGchGwnkQV"/>
+<div class="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+<a class="bg-primary text-on-primary font-label-md px-6 py-2 rounded-lg flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300" href="#">
+                            Ver Detalhes <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="p-6">
+<div class="flex gap-2 mb-3">
+<span class="font-code text-[10px] uppercase text-tertiary bg-tertiary/10 px-2 py-1 rounded">Python</span>
+<span class="font-code text-[10px] uppercase text-primary bg-primary/10 px-2 py-1 rounded">n8n</span>
+</div>
+<h3 class="font-headline-md text-on-surface text-lg mb-2 group-hover:text-primary transition-colors">Pipeline de Automação</h3>
+<p class="font-body-sm text-on-surface-variant text-sm line-clamp-2">Arquitetura de automação de processos de negócios conectando múltiplos CRMs e ferramentas de comunicação via webhooks.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xl px-gutter max-w-container-max mx-auto mb-xl relative overflow-hidden rounded-2xl glass-panel mt-lg text-center" id="contato">
+<!-- Background accents -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-primary/20 blur-[100px] rounded-full pointer-events-none"></div>
+<div class="relative z-10 py-12 px-6 flex flex-col items-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Pronto para inovar seu próximo projeto?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-2xl">
+                Vamos conversar sobre como tecnologias modernas e inteligência artificial podem escalar seu negócio e criar experiências incríveis.
+            </p>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-lg hover:brightness-110 hover:shadow-[0_0_20px_rgba(77,142,255,0.4)] transition-all duration-300 flex items-center gap-2">
+                Solicitar orçamento
+                <span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-xl bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-md px-gutter max-w-container-max mx-auto">
+<div class="text-headline-sm font-headline-sm font-bold text-on-surface dark:text-on-surface">
+                DevPortfolio
+            </div>
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
+                © 2024 DevPortfolio. Built with precision.
+            </p>
+<div class="flex gap-4">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="#">GitHub</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="#">LinkedIn</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="#">Instagram</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>
